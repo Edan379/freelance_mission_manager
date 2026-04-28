@@ -1,0 +1,31 @@
+<h1>Connexion</h1>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label>
+    Email
+    <input type="email" formControlName="email" />
+  </label>
+
+  @if (form.controls.email.touched && form.controls.email.hasError('required')) {
+    <p>L’email est obligatoire.</p>
+  }
+
+  @if (form.controls.email.touched && form.controls.email.hasError('email')) {
+    <p>L’email est invalide.</p>
+  }
+
+  <label>
+    Mot de passe
+    <input type="password" formControlName="password" />
+  </label>
+
+  @if (form.controls.password.touched && form.controls.password.hasError('required')) {
+    <p>Le mot de passe est obligatoire.</p>
+  }
+
+  @if (form.controls.password.touched && form.controls.password.hasError('minlength')) {
+    <p>Le mot de passe doit contenir au moins 6 caractères.</p>
+  }
+
+  <button type="submit">Se connecter</button>
+</form>

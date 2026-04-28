@@ -1,0 +1,13 @@
+<h1>Détail de la mission</h1>
+
+@if (mission) {
+  <h2>{{ mission.title }}</h2>
+  <p>Client : {{ mission.client }}</p>
+  <p>Statut : {{ mission.status }}</p>
+  <p>TJM : {{ mission.dailyRate }} $</p>
+  <p>Date : {{ mission.startDate }}</p>
+} @else {
+  <p>Mission introuvable</p>
+}
+
+<a routerLink="/missions"><p>Retour</p></a>

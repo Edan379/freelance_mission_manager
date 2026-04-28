@@ -1,0 +1,57 @@
+<h1>Créer une mission</h1>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+  <label>
+    Titre
+    <input type="text" formControlName="title" />
+  </label>
+
+  @if (form.controls.title.touched && form.controls.title.hasError('required')) {
+  <p>Le titre est obligatoire.</p>
+  }
+
+  @if (form.controls.title.touched && form.controls.title.hasError('minlength')) {
+  <p>Le titre doit contenir au moins 3 caractères.</p>
+  }
+
+  <label>
+    Client
+    <input type="text" formControlName="client" />
+  </label>
+
+  @if (form.controls.client.touched && form.controls.client.hasError('required')) {
+  <p>Le client est obligatoire.</p>
+  }
+
+  <label>
+    Statut
+    <select formControlName="status">
+      <option value="draft">Draft</option>
+      <option value="sent">Sent</option>
+      <option value="accepted">Accepted</option>
+      <option value="rejected">Rejected</option>
+    </select>
+  </label>
+
+  <label>
+    TJM
+    <input type="number" formControlName="dailyRate" />
+  </label>
+
+  @if (form.controls.dailyRate.touched && form.controls.dailyRate.hasError('min')) {
+  <p>Le TJM doit être au minimum de 100 $.</p>
+  }
+
+  <label>
+    Date de début
+    <input type="date" formControlName="startDate" />
+  </label>
+
+  @if (form.controls.startDate.touched && form.controls.startDate.hasError('required')) {
+  <p>La date de début est obligatoire.</p>
+  }
+
+  <button type="submit">Créer</button>
+
+</form>

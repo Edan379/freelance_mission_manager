@@ -1,59 +1,58 @@
-# FreelanceMissionManager
+# 📊 Dashboard Missions - Angular
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.8.
+## 💡 Contexte
 
-## Development server
+Ce projet s’inscrit dans une démarche d’apprentissage rapide d’un nouvel environnement technique.
 
-To start a local development server, run:
+Bien que mon expérience principale soit basée sur React et NestJS, j’ai souhaité monter rapidement en compétence sur Angular afin de comprendre ses spécificités, notamment en termes d’architecture, de structuration des applications et d’utilisation en environnement entreprise.
+
+L’objectif était de comparer les approches et d’être capable de m’adapter efficacement à un projet Angular.
+
+---
+
+## 🎯 Objectif du projet
+
+Développer une application concrète permettant de comprendre les fondamentaux d’Angular et ses patterns utilisés en contexte professionnel.
+
+---
+
+## 🧠 Ce que j’ai appris
+
+À travers ce projet, j’ai travaillé sur :
+
+- La structure d’une application Angular
+- Le routing et la navigation
+- Les composants et leur organisation
+- Les services et l’injection de dépendances
+- Les formulaires réactifs (Reactive Forms)
+- La gestion d’état via services
+- Les guards (authentification / protection des routes)
+- Les interactions utilisateur (CRUD)
+
+---
+
+## ⚙️ Fonctionnalités
+
+- Authentification simulée (login / logout)
+- Protection des routes avec guards
+- Liste de missions
+- Création de mission (formulaire)
+- Suppression de mission avec confirmation
+- Filtrage des missions par statut
+- Détail d’une mission
+
+---
+
+## 🛠️ Stack technique
+
+- Angular
+- TypeScript
+- HTML / CSS
+
+---
+
+## 🚀 Lancer le projet
 
 ```bash
-ng serve
-```
-
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+npm install
+npx ng serve
