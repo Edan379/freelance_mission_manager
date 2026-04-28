@@ -1,4 +1,4 @@
-<h1>Créer une mission</h1>
+<h1>{{ isEditMode ? 'Modifier une mission' : 'Créer une mission' }}</h1>
 
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
 
@@ -52,6 +52,7 @@
   <p>La date de début est obligatoire.</p>
   }
 
-  <button type="submit">Créer</button>
-
+  <button type="submit">
+    {{ isEditMode ? 'Modifier' : 'Créer' }}
+  </button>
 </form>

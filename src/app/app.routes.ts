@@ -16,7 +16,7 @@ export const routes: Routes = [
   {
     path: 'login',
     component: LoginPageComponent,
-    canActivate:[guestGuard]
+    canActivate: [guestGuard]
   },
   {
     path: 'dashboard',
@@ -32,6 +32,11 @@ export const routes: Routes = [
     path: 'missions/new',
     component: MissionFormPageComponent,
     canActivate: [authGuard]
+  },
+  {
+    path: 'missions/:id/edit',
+    component: MissionFormPageComponent,
+    canActivate: [authGuard],
   },
   {
     path: 'missions/:id',

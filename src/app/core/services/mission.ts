@@ -56,4 +56,15 @@ export class MissionService {
   getMissionById(id: number): Mission | undefined {
     return this.missions.find(m => m.id === id);
   }
+
+  updateMission(id: number, updatedMission: Omit<Mission, 'id'>): void {
+    const index = this.missions.findIndex(m => m.id === id);
+
+    if (index !== -1) {
+      this.missions[index] = {
+        id,
+        ...updatedMission,
+      };
+    }
+  }
 }
