@@ -1,0 +1,44 @@
+nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 16px 32px;
+  background: #1e3a8a;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  margin-left: auto;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #dc2626;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 14px 16px;
+  }
+
+  button {
+    margin-left: 0;
+    width: 100%;
+  }
+}
