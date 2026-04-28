@@ -26,8 +26,14 @@
   <p>TJM : {{ mission.dailyRate }} $</p>
   <p>Date de début : {{ mission.startDate }}</p>
 
-  <button (click)="deleteMission(mission.id)">
-    Supprimer
-  </button>
+  <div class="mission-actions">
+    <button (click)="deleteMission(mission.id)">
+      Supprimer
+    </button>
+
+    <a [routerLink]="['/missions', mission.id, 'edit']" class="edit-link">
+      Modifier
+    </a>
+  </div>
 </article>
 }
